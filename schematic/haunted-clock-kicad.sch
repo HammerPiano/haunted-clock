@@ -1,0 +1,557 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Haunted Clock"
+Date "2021-09-28"
+Rev "V0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 61530513
+P 3000 2650
+F 0 "A1" H 3000 1561 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 2650 1450 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 3000 2650 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3000 2650 50  0001 C CNN
+	1    3000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:MAN72A U3
+U 1 1 615357D9
+P 8950 2050
+F 0 "U3" H 8950 2717 50  0000 C CNN
+F 1 "MAN72A" H 8950 2626 50  0000 C CNN
+F 2 "Display_7Segment:MAN72A" H 8450 1350 50  0001 L CNN
+F 3 "https://www.digchip.com/datasheets/parts/datasheet/161/MAN3640A-pdf.php" H 9030 2400 50  0001 L CNN
+	1    8950 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:MAN72A U6
+U 1 1 61536A8A
+P 10650 2050
+F 0 "U6" H 10650 2717 50  0000 C CNN
+F 1 "MAN72A" H 10650 2626 50  0000 C CNN
+F 2 "Display_7Segment:MAN72A" H 10150 1350 50  0001 L CNN
+F 3 "https://www.digchip.com/datasheets/parts/datasheet/161/MAN3640A-pdf.php" H 10730 2400 50  0001 L CNN
+	1    10650 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 61537B41
+P 9600 1650
+F 0 "D2" H 9593 1867 50  0000 C CNN
+F 1 "RED" H 9593 1776 50  0000 C CNN
+F 2 "" H 9600 1650 50  0001 C CNN
+F 3 "~" H 9600 1650 50  0001 C CNN
+	1    9600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 6153832B
+P 9600 2050
+F 0 "D3" H 9593 2267 50  0000 C CNN
+F 1 "RED" H 9593 2176 50  0000 C CNN
+F 2 "" H 9600 2050 50  0001 C CNN
+F 3 "~" H 9600 2050 50  0001 C CNN
+	1    9600 2050
+	1    0    0    -1  
+$EndComp
+Text Label 5400 1600 2    50   ~ 0
+LED_A
+Text Label 5400 1700 2    50   ~ 0
+LED_B
+Text Label 5400 1800 2    50   ~ 0
+LED_C
+Text Label 5400 1900 2    50   ~ 0
+LED_D
+Text Label 5400 2000 2    50   ~ 0
+LED_E
+Text Label 5400 2100 2    50   ~ 0
+LED_F
+Text Label 5400 2200 2    50   ~ 0
+LED_G
+Text Label 5400 2300 2    50   ~ 0
+LED_DP
+Text Label 8650 1650 2    50   ~ 0
+LED_A
+Text Label 8650 1750 2    50   ~ 0
+LED_B
+Text Label 8650 1850 2    50   ~ 0
+LED_C
+Text Label 8650 1950 2    50   ~ 0
+LED_D
+Text Label 8650 2050 2    50   ~ 0
+LED_E
+Text Label 8650 2150 2    50   ~ 0
+LED_F
+Text Label 8650 2250 2    50   ~ 0
+LED_G
+Text Label 9350 1300 0    50   ~ 0
+LED_DP
+Text Label 10350 1650 2    50   ~ 0
+LED_A
+Text Label 10350 1750 2    50   ~ 0
+LED_B
+Text Label 10350 1850 2    50   ~ 0
+LED_C
+Text Label 10350 1950 2    50   ~ 0
+LED_D
+Text Label 10350 2050 2    50   ~ 0
+LED_E
+Text Label 10350 2150 2    50   ~ 0
+LED_F
+Text Label 10350 2250 2    50   ~ 0
+LED_G
+Text Label 7600 2000 0    50   ~ 0
+CA_1
+Text Label 7600 2100 0    50   ~ 0
+CA_2
+Text Label 7600 2200 0    50   ~ 0
+CA_3
+Text Label 7600 2300 0    50   ~ 0
+CA_4
+Text Label 9250 2450 0    50   ~ 0
+CA_5
+Text Label 10950 2450 0    50   ~ 0
+CA_6
+NoConn ~ 10950 2350
+NoConn ~ 10350 2450
+NoConn ~ 9250 2350
+NoConn ~ 8650 2450
+Text Label 9750 1650 0    50   ~ 0
+CA_5
+Text Label 9750 2050 0    50   ~ 0
+CA_6
+Wire Wire Line
+	9450 2050 9350 2050
+Wire Wire Line
+	9350 2050 9350 1650
+Wire Wire Line
+	9450 1650 9350 1650
+Connection ~ 9350 1650
+Wire Wire Line
+	9350 1650 9350 1300
+$Comp
+L project:TM1637 U1
+U 1 1 6156532A
+P 6100 4150
+F 0 "U1" H 6550 5450 50  0000 C CNN
+F 1 "TM1637" H 6500 5350 50  0000 C CNN
+F 2 "" H 6100 4150 50  0001 C CNN
+F 3 "" H 6100 4150 50  0001 C CNN
+	1    6100 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L project:LED_Clock U2
+U 1 1 6156C74D
+P 6500 1900
+F 0 "U2" H 6500 2567 50  0000 C CNN
+F 1 "LED_Clock" H 6500 2476 50  0000 C CNN
+F 2 "Display_7Segment:CA56-12EWA" H 6500 1300 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 6070 1930 50  0001 C CNN
+	1    6500 1900
+	1    0    0    -1  
+$EndComp
+Text Label 6800 3250 0    50   ~ 0
+LED_A
+Text Label 6800 3450 0    50   ~ 0
+LED_B
+Text Label 6800 3650 0    50   ~ 0
+LED_C
+Text Label 6800 3850 0    50   ~ 0
+LED_D
+Text Label 6800 4050 0    50   ~ 0
+LED_E
+Text Label 6800 4250 0    50   ~ 0
+LED_F
+Text Label 6800 4450 0    50   ~ 0
+LED_G
+Text Label 6800 4650 0    50   ~ 0
+LED_DP
+Text Label 5400 4050 2    50   ~ 0
+CA_1
+Text Label 5400 4250 2    50   ~ 0
+CA_2
+Text Label 5400 4450 2    50   ~ 0
+CA_3
+Text Label 5400 4650 2    50   ~ 0
+CA_4
+Text Label 5400 4850 2    50   ~ 0
+CA_5
+Text Label 5400 5050 2    50   ~ 0
+CA_6
+$Comp
+L power:VCC #PWR04
+U 1 1 61581432
+P 3200 1650
+F 0 "#PWR04" H 3200 1500 50  0001 C CNN
+F 1 "VCC" H 3215 1823 50  0000 C CNN
+F 2 "" H 3200 1650 50  0001 C CNN
+F 3 "" H 3200 1650 50  0001 C CNN
+	1    3200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR07
+U 1 1 61581C1E
+P 6100 3050
+F 0 "#PWR07" H 6100 2900 50  0001 C CNN
+F 1 "VCC" H 6115 3223 50  0000 C CNN
+F 2 "" H 6100 3050 50  0001 C CNN
+F 3 "" H 6100 3050 50  0001 C CNN
+	1    6100 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 6158323B
+P 3100 3650
+F 0 "#PWR03" H 3100 3400 50  0001 C CNN
+F 1 "GND" H 3105 3477 50  0000 C CNN
+F 2 "" H 3100 3650 50  0001 C CNN
+F 3 "" H 3100 3650 50  0001 C CNN
+	1    3100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 61583DD6
+P 6100 5300
+F 0 "#PWR08" H 6100 5050 50  0001 C CNN
+F 1 "GND" H 6105 5127 50  0000 C CNN
+F 2 "" H 6100 5300 50  0001 C CNN
+F 3 "" H 6100 5300 50  0001 C CNN
+	1    6100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 615A29F9
+P 2750 5050
+F 0 "SW4" H 2750 5335 50  0000 C CNN
+F 1 "SW_Push" H 2750 5244 50  0000 C CNN
+F 2 "" H 2750 5250 50  0001 C CNN
+F 3 "~" H 2750 5250 50  0001 C CNN
+	1    2750 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW5
+U 1 1 615A368D
+P 3450 5050
+F 0 "SW5" H 3450 5335 50  0000 C CNN
+F 1 "SW_Push" H 3450 5244 50  0000 C CNN
+F 2 "" H 3450 5250 50  0001 C CNN
+F 3 "~" H 3450 5250 50  0001 C CNN
+	1    3450 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW6
+U 1 1 615A3D99
+P 4100 5050
+F 0 "SW6" H 4100 5335 50  0000 C CNN
+F 1 "SW_Push" H 4100 5244 50  0000 C CNN
+F 2 "" H 4100 5250 50  0001 C CNN
+F 3 "~" H 4100 5250 50  0001 C CNN
+	1    4100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 615A4237
+P 3450 5450
+F 0 "#PWR05" H 3450 5200 50  0001 C CNN
+F 1 "GND" H 3455 5277 50  0000 C CNN
+F 2 "" H 3450 5450 50  0001 C CNN
+F 3 "" H 3450 5450 50  0001 C CNN
+	1    3450 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5050 2950 5450
+Wire Wire Line
+	2950 5450 3450 5450
+Wire Wire Line
+	4300 5450 4300 5050
+Connection ~ 3450 5450
+Wire Wire Line
+	3450 5450 3650 5450
+Wire Wire Line
+	3650 5050 3650 5450
+Connection ~ 3650 5450
+Wire Wire Line
+	3650 5450 4300 5450
+$Comp
+L Device:Buzzer BZ1
+U 1 1 615A654A
+P 1900 5150
+F 0 "BZ1" H 2052 5179 50  0000 L CNN
+F 1 "Buzzer" H 2052 5088 50  0000 L CNN
+F 2 "" V 1875 5250 50  0001 C CNN
+F 3 "~" V 1875 5250 50  0001 C CNN
+	1    1900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 615AA8B0
+P 1650 5450
+F 0 "#PWR01" H 1650 5200 50  0001 C CNN
+F 1 "GND" H 1655 5277 50  0000 C CNN
+F 2 "" H 1650 5450 50  0001 C CNN
+F 3 "" H 1650 5450 50  0001 C CNN
+	1    1650 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5250 1650 5250
+Wire Wire Line
+	1650 5250 1650 5450
+Text Label 2500 3050 2    50   ~ 0
+buzzer
+Text Label 1800 5050 2    50   ~ 0
+buzzer
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 615B3436
+P 2700 6000
+F 0 "SW1" H 2700 6285 50  0000 C CNN
+F 1 "SW_SPDT" H 2700 6194 50  0000 C CNN
+F 2 "" H 2700 6000 50  0001 C CNN
+F 3 "~" H 2700 6000 50  0001 C CNN
+	1    2700 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW3
+U 1 1 615B571D
+P 2700 7000
+F 0 "SW3" H 2700 7285 50  0000 C CNN
+F 1 "SW_SPDT" H 2700 7194 50  0000 C CNN
+F 2 "" H 2700 7000 50  0001 C CNN
+F 3 "~" H 2700 7000 50  0001 C CNN
+	1    2700 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 615B5A8F
+P 2700 6500
+F 0 "SW2" H 2700 6785 50  0000 C CNN
+F 1 "SW_SPDT" H 2700 6694 50  0000 C CNN
+F 2 "" H 2700 6500 50  0001 C CNN
+F 3 "~" H 2700 6500 50  0001 C CNN
+	1    2700 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Timer_RTC:DS1307Z+ U5
+U 1 1 615B952B
+P 10300 4650
+F 0 "U5" H 10844 4696 50  0000 L CNN
+F 1 "DS1307Z+" H 10400 4250 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 10300 4150 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DS1307.pdf" H 10300 4650 50  0001 C CNN
+	1    10300 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_EEPROM:24LC32 U4
+U 1 1 615C00DC
+P 9100 5200
+F 0 "U4" H 9300 5650 50  0000 C CNN
+F 1 "24LC32" H 9300 5550 50  0000 C CNN
+F 2 "" H 9100 5200 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21072G.pdf" H 9100 5200 50  0001 C CNN
+	1    9100 5200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8700 5100
+NoConn ~ 8700 5200
+NoConn ~ 8700 5300
+NoConn ~ 9500 5300
+$Comp
+L power:GND #PWR010
+U 1 1 615D00BF
+P 9100 5500
+F 0 "#PWR010" H 9100 5250 50  0001 C CNN
+F 1 "GND" H 9105 5327 50  0000 C CNN
+F 2 "" H 9100 5500 50  0001 C CNN
+F 3 "" H 9100 5500 50  0001 C CNN
+	1    9100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 615D11DC
+P 10300 5050
+F 0 "#PWR012" H 10300 4800 50  0001 C CNN
+F 1 "GND" H 10305 4877 50  0000 C CNN
+F 2 "" H 10300 5050 50  0001 C CNN
+F 3 "" H 10300 5050 50  0001 C CNN
+	1    10300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR011
+U 1 1 615D2665
+P 10300 4250
+F 0 "#PWR011" H 10300 4100 50  0001 C CNN
+F 1 "VCC" H 10315 4423 50  0000 C CNN
+F 2 "" H 10300 4250 50  0001 C CNN
+F 3 "" H 10300 4250 50  0001 C CNN
+	1    10300 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR09
+U 1 1 615D2C51
+P 9100 4900
+F 0 "#PWR09" H 9100 4750 50  0001 C CNN
+F 1 "VCC" H 9115 5073 50  0000 C CNN
+F 2 "" H 9100 4900 50  0001 C CNN
+F 3 "" H 9100 4900 50  0001 C CNN
+	1    9100 4900
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4450 5600 4450 1050
+Wire Notes Line
+	4450 1050 8300 1050
+Wire Notes Line
+	8300 1050 8300 5600
+Wire Notes Line
+	8300 5600 4450 5600
+Text Label 9800 4450 2    50   ~ 0
+SCL
+Text Label 9500 5200 0    50   ~ 0
+SCL
+Text Label 9500 5100 0    50   ~ 0
+SDA
+Text Label 9800 4550 2    50   ~ 0
+SDA
+Wire Notes Line
+	8600 5800 10950 5800
+Wire Notes Line
+	10950 5800 10950 3900
+Wire Notes Line
+	10950 3900 8600 3900
+Wire Notes Line
+	8600 3900 8600 5800
+Text Label 3500 3050 0    50   ~ 0
+SDA
+Text Label 3500 3150 0    50   ~ 0
+SCL
+Wire Wire Line
+	2500 7000 2500 6500
+Connection ~ 2500 6500
+Wire Wire Line
+	2500 6500 2500 6000
+$Comp
+L power:GND #PWR02
+U 1 1 61622386
+P 2150 7000
+F 0 "#PWR02" H 2150 6750 50  0001 C CNN
+F 1 "GND" H 2155 6827 50  0000 C CNN
+F 2 "" H 2150 7000 50  0001 C CNN
+F 3 "" H 2150 7000 50  0001 C CNN
+	1    2150 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 7000 2150 7000
+Connection ~ 2500 7000
+Text Label 2500 2950 2    50   ~ 0
+DIO
+Text Label 2500 2850 2    50   ~ 0
+CLK
+Text Label 2550 5050 2    50   ~ 0
+Button1
+Text Label 3250 5050 2    50   ~ 0
+Button2
+Text Label 3900 5050 2    50   ~ 0
+Button3
+Text Label 2900 5900 0    50   ~ 0
+Haunted_EN
+Text Label 2900 6400 0    50   ~ 0
+LED_EN
+Text Label 2900 6900 0    50   ~ 0
+Buzzer_EN
+Text Label 2500 2250 2    50   ~ 0
+Button1
+Text Label 2500 2350 2    50   ~ 0
+Button2
+Text Label 2500 2450 2    50   ~ 0
+Button3
+Text Label 2500 2550 2    50   ~ 0
+Haunted_EN
+Text Label 2500 2650 2    50   ~ 0
+LED_EN
+Text Label 2500 2750 2    50   ~ 0
+Buzzer_EN
+$Comp
+L Device:LED D1
+U 1 1 6165EE11
+P 4750 6550
+F 0 "D1" V 4789 6432 50  0000 R CNN
+F 1 "GREEN" V 4698 6432 50  0000 R CNN
+F 2 "" H 4750 6550 50  0001 C CNN
+F 3 "~" H 4750 6550 50  0001 C CNN
+	1    4750 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61662768
+P 4750 6700
+F 0 "#PWR06" H 4750 6450 50  0001 C CNN
+F 1 "GND" H 4755 6527 50  0000 C CNN
+F 2 "" H 4750 6700 50  0001 C CNN
+F 3 "" H 4750 6700 50  0001 C CNN
+	1    4750 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61665264
+P 4450 6250
+F 0 "R1" V 4657 6250 50  0000 C CNN
+F 1 "220" V 4566 6250 50  0000 C CNN
+F 2 "" V 4380 6250 50  0001 C CNN
+F 3 "~" H 4450 6250 50  0001 C CNN
+	1    4450 6250
+	0    -1   -1   0   
+$EndComp
+Text Label 4300 6250 2    50   ~ 0
+Alarm_Pending
+Wire Wire Line
+	4600 6250 4750 6250
+Wire Wire Line
+	4750 6250 4750 6400
+Text Label 2500 3150 2    50   ~ 0
+Alarm_Pending
+NoConn ~ 9800 4750
+NoConn ~ 9800 4850
+Text Notes 5450 1050 0    200  Italic 0
+TM1637 Module
+Text Notes 8650 3850 0    200  Italic 0
+RTC Module
+Text Label 5400 3650 2    50   ~ 0
+CLK
+Text Label 5400 3450 2    50   ~ 0
+DIO
+$EndSCHEMATC
