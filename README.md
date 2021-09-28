@@ -47,3 +47,6 @@ But, because it is haunted, this can happen:
 * Add interface buttons
 * Add control switches
 * Fun part - glitches!!!
+
+Use git actions for compilation maybe?
+
